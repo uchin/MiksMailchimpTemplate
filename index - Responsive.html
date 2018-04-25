@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="format-detection" content="telephone=no"> 
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+        
+        <title>MIks Newsletter Responsive</title>        
+        
+    <style type="text/css">
+        
+         @import url(http://fonts.googleapis.com/css?family=Roboto:300); /*Calling our web font*/
+
+        /* Some resets and issue fixes */
+        #outlook a { padding:0; }
+        body{ width:100% !important; -webkit-text; size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; }     
+        .ReadMsgBody { width: 100%; }
+        .ExternalClass {width:100%;} 
+        .backgroundTable {margin:0 auto; padding:0; width:100%;!important;} 
+        table td {border-collapse: collapse;}
+        .ExternalClass * {line-height: 115%;}           
+        /* End reset */
+
+
+        /* These are our tablet/medium screen media queries */
+        @media screen and (max-width: 630px){
+
+            *[class="list"] td{padding: 0px 0px 48px 0px !important;border:none !important}
+            *[id="more"] {text-align: left !important;margin-bottom: 40px;}
+            *[class="featured"] td{border:none !important;}
+            *[id="np"] {padding-bottom: 0px !important;}
+            /* Display block allows us to stack elements */                      
+            *[class="mobile-column"] {display: block;} 
+
+            /* Some more stacking elements */
+            *[class="mob-column"] {float: none !important;width: 100% !important;}     
+
+            /* centered */
+            *[class="center"] {text-align: center !important;} 
+            
+            /* padding or margin */
+            *[class="ptpb"] {padding-top:  20px !important; padding-bottom: 20px !important;} 
+            *[class="pt"] {padding-top:  20px !important;}  
+            *[class="pb"] {padding-bottom:  20px !important;} 
+            *[class="mt"] {margin-top:  20px !important;} 
+            *[class="nb"] {border:none !important;} 
+            *[class="np"] {padding-left:0px !important; padding-right:0px !important;} 
+            
+            /* Hide stuff */
+            *[class="hide"] {display:none !important;}          
+
+            /* This sets elements to 100% width and fixes the height issues too, a god send */
+            *[class="100p"] {width:100% !important; height:auto !important;}                    
+
+            /* For the 2x2 stack */         
+            *[class="condensed"] {/*padding-bottom:40px !important;*/ display: block;}
+
+            /* Centers content on mobile */
+            *[class="center"] {text-align:center !important; width:100% !important; height:auto !important;}            
+
+            /* 100percent width section with 20px padding */
+            *[class="100pad"] {width:100% !important; padding:20px;} 
+
+            /* 100percent width section with 20px padding left & right */
+            *[class="100padleftright"] {width:100% !important; padding:0 20px 0 20px;} 
+
+            /* 100percent width section with 20px padding top & bottom */
+            *[class="100padtopbottom"] {width:100% !important; padding:20px 0px 20px 0px !important;}
+            
+            .ribbon{
+                width: 95% !important;
+            }
+            .ribbon-content{
+            padding: 3px 0px !important;
+            }
+            a .ribbon{
+                width: 75% !important;
+            }
+            .ribbon-content{
+            padding: 3px 0px !important;
+            }
+             img.content{padding-top: 48px;}
+        
+        }
+		img{
+			border:none;
+		}
+		a{
+			text-decoration:none;
+			font-weight:700;
+		}
+		h1{
+			margin:0;
+			padding:0;
+			font-family:"Georgia";
+			font-size:40px;
+			color:#fff;
+			font-weight:700;
+            letter-spacing: -1px;
+		}
+		h2{
+			font-family:"Georgia";
+			font-size:18px;
+			color:#53545e;
+			font-weight:700;
+			margin:0;
+			padding:0;
+			text-transform:capitalize !important;
+			letter-spacing:-0.1px;
+		}
+		p{
+			font-family:"Arial";
+			font-size:14px;
+			color:#848484;
+			line-height:22px;
+			margin-bottom:32px;
+		}
+		a span{
+			margin-top:24px;
+			background:#ef6f3d;
+			padding:10px 25px;
+			font-family:"Arial";
+			color:#fff;
+			font-weight:620;
+			font-size:14px;
+		}
+		#web a{
+			background:url(img/home_ico.png) no-repeat right 5px center;
+			padding:14px 0px;
+			height:44px;
+		}
+		#web a span{
+			background:transparent;
+			font-weight:100;
+			font-size:16px;
+			letter-spacing:1px;
+			height:44px;
+			padding-right:50px;
+		}
+		#contact h2{
+			color:#fff;
+            font-family: "Georgia";
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: capitalize;
+		}
+		#footer{
+			font-family:"Arial";
+			font-size:12px;
+			color:#949494;
+		}
+		#footer a{
+			font-weight:400;
+			text-decoration:none;
+			color:#ef6f3d;
+		}
+		#footer a:hover{
+			text-decoration:underline;
+		}
+        /*ribbon style*/
+        .ribbon {
+         font-size: 14px !important;
+         /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+         width: 50%;
+
+         position: relative;
+         background: #ef6f3d;
+         color: #fff;
+         text-align: center;
+         padding: 15px 0; /* Adjust to suit */
+         margin: 0 auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+        margin-bottom: -23px;
+        }
+        .ribbon:before, .ribbon:after {
+         content: "";
+         position: absolute;
+         display: block;
+         border: 1.7em solid #ef6f3d;
+         z-index: 10;
+        }
+        .ribbon:before {
+         left: -2em;
+         border-right-width: 1.5em;
+         border-left-color: transparent;
+        top: 0;
+        }
+        .ribbon:after {
+         right: -2em;
+         border-left-width: 1.5em;
+         border-right-color: transparent;
+            top: 0;
+        }
+        .ribbon-content{
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            padding: 6px 25px;
+            margin: 12px 0;
+            text-transform:uppercase;
+            font-family: "Arial";
+            letter-spacing: 1px;
+        }
+        
+        .nb{
+            border: none;
+        }
+        
+        a .ribbon{
+            width: 35%;
+            margin-bottom: 48px !important;
+        }
+        
+        a .ribbon-content{
+            padding: 3px 0px !important;
+        }
+        
+        #embed{
+            background: #fff;
+            position: relative;
+            padding: 15px;
+            width: 245px;
+            height: auto;
+            margin-top: -250px;
+            margin-left: 10px;
+        }
+        
+        
+</style></head>
+    <body style="margin:0;padding:0;overflow-x: hidden;">
+        <table style="width:100%" cellspacing="0" cellpadding="0">
+            <tr style="tet-align:center; background: #424242; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+                <td>
+                    <table id="header" style="height:360px;width:620px;margin-left:auto;margin-right:auto;padding-left:30px;padding-right:30px;" class="100p">
+                        <tr>
+                            <td width="50%" style="font-size:24px;color:#fff;font-family:'Arial';padding-bottom:24px;" mc:edit="logo" class="center"><img src="img/logo.png" alt="logo" style="width:181px;height:51px;" class="mt"></td>
+                            <td width="50%" class="hide" id="web" style="text-align:right;font-size:14px;color:#fff;font-family:'Arial'"><a href="#" target="_blank" mc:edit="site"><span>visit our website</span></a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"  style="height:100px;border-bottom:1px solid #5c5c5c;border-top:1px solid #5c5c5c;text-align:center;" class="ptpb">
+                                <h1 mc:edit="maintitle">Grow Your Business in 2015</h1>
+                            </td>
+                        </tr>
+                        <tr  style="height:120px;">
+                            <td colspan="2" valign="top" style="text-align:left;padding-left:30px;padding-right:30px;padding-top:50px;text-align:center;">
+                                <a href="#" target="_blank" mc:edit="btn1">
+                                    <div class="ribbon">
+                                        <strong class="ribbon-content nb" mc:edit="ribbon1">Check out now</strong>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:30px;padding-right:30px;" cellspacing="0" cellpadding="0" class="100p">
+                        <tr valign="center">
+                            <td valign="center" style="padding-top:40px;">
+                                <div class="ribbon">
+                                    <strong class="ribbon-content" mc:edit="ribbon2">Populer of the week!</strong>
+                                </div> 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;background:#fff;" cellspacing="0" cellpadding="0" class="100p">
+                
+                        <tr>
+                            <td colspan="2" style="text-align:center;padding-top:45px;padding-bottom:40px;" class="100p" valign="top">
+                                <img src="img/featured.png" alt="" style="display:block;width:100%;height:auto;margin-bottom:24px;" mc:edit="img1">
+                                <div id="embed" class="hide" style="text-align:left;padding-bottom:30px;">
+                                    <h2 mc:edit="mob">MOBAPP Flat Landing Page</h2>
+                                    <p mc:edit="mobtext">MOBAPP is a Modern Flat Landing Page template that perfect to promote your awesome mobile app.</p>
+                                    <a href="#" target="_blank" mc:edit="mobbtn1"><span>READ MORE</span></a>  
+                                </div>
+                            </td>                       
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;" cellspacing="0" cellpadding="0" class="100p">
+                        <tr valign="center">
+                            <td valign="center" style="padding-top:40px;">
+                                <div class="ribbon">
+                                    <strong class="ribbon-content" mc:edit="ribbon3">Latest post this week!</strong>
+                                </div> 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;paddding-bottom:20px;background:#fff;" cellspacing="0" cellpadding="0" class="100p">
+                
+                        
+                        <tr style="background:#fff;" class="list">
+                            <td valign="top" style="padding-top:45px;padding-right:7px;padding-bottom:40px;" class="condensed" >
+                                <img src="img/thumb1.png" alt="" style="display:block;width:100%;height:auto;" mc:edit="thumb1" class="content"> 
+                            </td>
+                            <td valign="top" style="padding-top:40px;padding-left:7px;padding-bottom:40px;" class="condensed">
+                                <h2 mc:edit="hot2">25 Trully Realistic Icons by Alex Volkov</h2>
+                                <p mc:edit="hotext1">Introduce another great icon designer as our featured designer this week. His name is Alex Volkov from Kiev, Ukraine, a graphic designer and musician.</p>
+                                <a href="#" target="_blank" mc:edit="btn1"><span>Read More</span></a>  
+                            </td>
+                        </tr>
+                        
+                        <tr style="background:#fff;" class="list">
+                            <td valign="top" style="padding-top:0px;padding-right:7px;clearfix:both;" class="condensed" >
+                                <img src="img/thumb2.png" alt="" style="display:block;width:100%;height:auto;margin-bottom:24px;clearfix:both;" mc:edit="thumb2" class="content"> 
+                                <h2 mc:edit="hot3">35 Beautiful Flat Mobile App Landing Page Designs</h2>
+                                <p mc:edit="hotext2">This infographic by Pixaal.com has summarized 26 things that are really crucial to develop a website. Bookmark or save this infographic and take a time to</p>
+                                <a href="#" target="_blank" mc:edit="btn2"><span>Read More</span></a>
+                            </td>
+                            <td valign="top" style="padding-top:0px;padding-left:7px;padding-bottom:30px;" class="condensed">
+                                <img src="img/thumb3.png" alt="" style="display:block;width:100%;height:auto;margin-bottom:24px;" mc:edit="thumb3" class="content">
+                                <h2 mc:edit="hot4">Get Started to Develop a Website? 26 Basic Things</h2>
+                                <p mc:edit="hotext3">This infographic by Pixaal.com has summarized 26 things that are really crucial to develop a website. Bookmark or save this infographic and take a time to</p>
+                                <a href="#" target="_blank" mc:edit="btn3"><span>Read More</span></a>  
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;" cellspacing="0" cellpadding="0" class="100p">
+                        <tr valign="center">
+                            <td valign="center" style="padding-top:40px;">
+                                <div class="ribbon">
+                                    <strong class="ribbon-content" mc:edit="ribbon4">Freebie Collections</strong>
+                                </div> 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;padding-bottom:20px;background:#fff;" cellspacing="0" cellpadding="0" class="100p">
+                
+                        
+                        <tr style="background:#fff;" class="list">
+                            <td valign="top" style="padding-top:45px;padding-right:7px;" class="condensed">
+                                <a href="#"><img src="img/thumb4.png" alt="" style="display:block;width:100%;height:auto;" mc:edit="thumb4" class="content"> </a>
+                            </td>
+                            <td valign="top" style="padding-top:45px;padding-left:7px;" class="condensed">
+                                <a href="#"><img src="img/thumb5.png" alt="" style="display:block;width:100%;height:auto;" mc:edit="thumb5"> </a>
+                            </td>
+                        </tr>
+                        
+                        <tr style="background:#fff;" class="list">
+                            <td valign="top" style="padding-top:16px;padding-right:7px;" class="condensed">
+                                <a href="#"><img src="img/thumb6.png" alt="" style="display:block;width:100%;height:auto;" mc:edit="thumb6"> </a>
+                            </td>
+                            <td valign="top" style="padding-top:16px;padding-left:7px;" class="condensed">
+                                <a href="#"><img src="img/thumb7.png" alt="" style="display:block;width:100%;height:auto;" mc:edit="thumb7"> </a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+            </tr>
+            
+            
+            
+            <tr style="background:#c9c9c9;">
+                <td>
+                    <table style="width:620px; margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;" cellspacing="0" cellpadding="0" class="100p">
+                        <tr valign="center">
+                            <td valign="center" style="padding-top:0px;height:50px;">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr style="height:208px;background:#424242;">
+                <td>
+                    <table id="contact" style="width:620px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;" cellspacing="0" cellpadding="0" class="100p">
+                        <tr valign="top" style="height:70px;">
+                            <td valign="center" style="width:auto;padding-top:10px;padding-bottom:10px;text-align:center;" class="condensed">
+                                <h2 mc:edit="stay">Stay Connected</h2>
+                            </td>
+                            <td valign="top" style="text-align:center;width:auto;padding-left:15px;" class="condensed">
+                                <div style="margin-top:0px;padding-bottom:30px;text-align:center;">
+                                <a href="#" target="_blank" mc:edit="sos1" style="margin-top:12px;"><img src="https://gallery.mailchimp.com/3218d97c2bd4c81fe8a4511fa/images/af7c4060-ac09-4e4a-bc51-7ea7ba8730de.png" alt="twitter" style="width:45px;height:46px;display:inline-block;padding-right:5px;"></a>
+                                <a href="#" target="_blank" mc:edit="sos2"><img src="https://gallery.mailchimp.com/3218d97c2bd4c81fe8a4511fa/images/63116860-a5c8-44d3-acc3-f7bbe2c3fd2c.png" alt="twitter" style="width:45px;height:46px;display:inline-block;padding-right:5px;"></a>
+                                <a href="#" target="_blank" mc:edit="sos3"><img src="https://gallery.mailchimp.com/3218d97c2bd4c81fe8a4511fa/images/92f86dd3-a9d3-4648-be19-0631419c38a9.png" alt="gplus" style="width:45px;height:46px;display:inline-block;padding-right:5px;"></a>
+                                <a href="#" target="_blank" mc:edit="sos4"><img src="https://gallery.mailchimp.com/3218d97c2bd4c81fe8a4511fa/images/bb11d3a4-939b-4f66-90d8-18c903a14a0b.png" alt="pinterest" style="width:45px;height:46px;display:inline-block;padding-right:5px;"></a>
+                                <a href="#" target="_blank" mc:edit="sos5"><img src="https://gallery.mailchimp.com/3218d97c2bd4c81fe8a4511fa/images/2a4c659f-1e80-491c-b085-d08c7603f0b2.png" alt="behance" style="width:45px;height:46px;display:inline-block;"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="footer" valign="middle" style="height:60px;">
+                            <td mc:edit="footer" colspan="3" style="border-top:1px solid #7b7b7b;width:270px;padding-left:6px;padding-right:20px;text-align:center;padding-top:16px;padding-bottom:16px;">Don't want to receive anymore emails? <a href="*|UNSUB|*" target="_blank">Unsubscribe</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
